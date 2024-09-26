@@ -6,6 +6,31 @@ import java.util.Objects;
 public abstract class Figura implements FiguraGeometrica{
     private int y;
     private int x;
+    private String nombre;
+    private String color;
+
+    public Figura(int y, int x, String nombre, String color) {
+        setY(y);
+        setX(x);
+        setNombre(nombre);
+        setColor(color);
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -40,6 +65,7 @@ public abstract class Figura implements FiguraGeometrica{
     public void setX(int x) {
         this.x = x;
     }
+
     public abstract double calcularArea();
     public void mover(int valor,Direcciones direcciones){
         switch (direcciones){

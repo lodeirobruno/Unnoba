@@ -9,6 +9,13 @@ public class Cuadrado extends Figura{
         setLado(lado);
     }
 
+    @java.lang.Override
+    public java.lang.String toString() {
+        return "Cuadrado{" +
+                "lado=" + lado +
+                '}';
+    }
+
     public double getLado() {
         return lado;
     }
